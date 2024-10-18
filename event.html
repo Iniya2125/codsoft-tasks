@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <!-- Left Section -->
+    <div class="leftsection">
+        <div class="container">
+            <h1>Registration</h1>
+            <div class="form-card">
+                <table cellspacing="2" cellpadding="8" border="0">
+                    <tr><td>Name</td><td><input type="text" placeholder="Enter your name" id="n1"></td></tr>
+                    <tr><td>Email</td><td><input type="text" placeholder="Enter your email id" id="e1"></td></tr>
+                    <tr><td>Event Name</td><td><input type="text" placeholder="Enter event name" id="eventName"></td></tr>
+                    <tr><td>Event Date</td><td><input type="date" id="eventDate"></td></tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Register" onClick="register_event(); return false;"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="rightsection">
+        <h2>Welcome to the Party Hall</h2>
+        <p>The party hall is a versatile venue designed to host a variety of events. Equipped with modern amenities, it ensures every occasion is memorable and enjoyable. We welcome you!</p>
+        
+        <div class="button-container">
+            <button class="button subscribe-button">Subscribe</button>
+            <button class="button">Learn More</button>
+        </div>
+    </div>
+
+    
+
+    <script type="text/javascript">
+        function register_event() {
+            var n = document.getElementById("n1").value;
+            var e = document.getElementById("e1").value;
+            var letters = /^[A-Za-z\s]+$/; 
+            var email_val = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+
+            if (n === '' || e === '') {
+                alert("Please fill in all fields.");
+                return; 
+            } else if (!letters.test(n)) {
+                alert('Name is invalid. It must contain only alphabets.');
+                return; 
+            } else if (!email_val.test(e)) {
+                alert('Invalid email format. Please enter a valid email address.');
+                return; 
+            }
+
+            alert("You are registered for the event successfully!");
+            document.getElementById("n1").value = '';
+            document.getElementById("e1").value = '';
+        }
+    </script>
+</body>
+</html>
