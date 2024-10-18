@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <header>
+        <h1>Book Your Trip</h1>
+    </header>
+    <main>
+        <div id="package-details"></div>
+        <form id="booking-form">
+            <label for="dates">Select your travel dates:</label>
+            <input type="date" id="start-date" required>
+            <input type="date" id="end-date" required>
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const packageName = params.get('package');
+
+        const packageDetails = {
+            paris: 'You have selected the Paris Gateway package.',
+            maldives: 'You have selected the Maldives Escape package.',
+            newzealand: 'You have selected the New Zealand Mountains package.'
+        };
+
+        document.getElementById('package-details').innerText = packageDetails[packageName] || 'Package not found.';
+        
+        document.getElementById('booking-form').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Booking confirmed for ' + packageName);
+           
+        };
+    </script>
+</body>
+</html>
