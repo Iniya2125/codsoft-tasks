@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink-section {
+    width: 30%;
+    background-color: rgb(225, 131, 248);
+}
+
+.white-section {
+    width: 70%;
+    background-color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: flex-start;
+    line-height: 1.6;
+    margin: 10px;
+    max-width: 450px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card1 {
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 250px;
+    height: 400px;
+    margin-right: 50%;
+    overflow: hidden;
+    background-color: rgb(212, 138, 255);
+    position: absolute;
+    padding: 10px;
+    margin-left: 20%;
+    border-radius: 10px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20%;
+}
+
+.buttons {
+    margin-top: 20px;
+    
+}
+
+.buttons button {
+    margin: 0px 15px;
+    padding: 10px 30px;
+   
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.buttons button:hover {
+    background-color: #bb71ff;
+}
+
+.b1 {
+    background-color: #4e0369;
+    color: white;
+    border: #4e0369;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.b2 {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: 2px solid #ba5aff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:500;
+  
+}
+.facebook-icon, .github-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 0; 
+    border-radius: 50%;
+    padding: 5%;
+}
+.facebook-icon:hover, .github-icon:hover {
+    background-color: rgb(255, 206, 255); 
+}
+a {
+    text-decoration: none; 
+}
+
+
+
+.text {
+    background: linear-gradient(to right, #f8af9e, #e0affd); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 48px; 
+    font-weight: bold; 
+   
+  
+
+   
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+   
+    margin-bottom: 20px; 
+    margin: 0; 
+}
+.scrolldown{
+    text-align: center;
+}
+.project-container {
+    text-align: center;
+    margin: 50px auto;
+    font-family: Georgia,serif;
+}
+
+.project-container h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: Georgia,serif;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 10px;
+    width: 80%; 
+    margin: 0 auto; 
+    border-bottom: 1px solid #ccc; 
+}
+
+.project-description {
+    flex: 1; 
+    text-align: left; 
+    padding-right: 20px; 
+}
+
+.project-description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.project-description a {
+    text-decoration: none;
+    color: #4e0369;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-description a:hover {
+    color: #bb71ff;
+}
+
+.project-image {
+    width: 250px; 
+    height: auto; 
+    object-fit: cover;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1; /* Optional background color */
+    position: relative; /* Ensure it's positioned correctly */
+    bottom: 0;
+    width: 100%;
+}
+
+
+
